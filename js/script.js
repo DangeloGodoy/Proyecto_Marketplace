@@ -81,6 +81,24 @@ const products = [
     }
 ];
 
+const codeDiscount = [
+    {
+        id: 1,
+        code: "desc10",
+        discount: 10
+    },
+    {
+        id: 2,
+        code: "desc25",
+        discount: 25
+    },
+    {
+        id: 3,
+        code: "desc50",
+        discount: 50
+    }
+];
+
 function cardProducts() {
     const contaniner = document.getElementById('listProducts');
 
@@ -169,6 +187,8 @@ function cartProducts() {
         messageCart.className = "message-cart"
         messageCart.textContent = "El carrito esta vacio";
         containerCart.appendChild(messageCart);
+        let totalCart = document.getElementById('totalCart');
+        totalCart.innerHTML = `Total: $ 0`;
     } else {
     cart.forEach((product, index) => {
         let productDiv = document.createElement("div");
@@ -197,11 +217,32 @@ function cartProducts() {
         productDiv.appendChild(removeProduct);
 
         containerCart.appendChild(productDiv);
-        total += product.precio * product.count
+        total += product.price * product.count;
     });
+
 
     let totalCart = document.getElementById('totalCart');
     totalCart.innerHTML = `Total: $ ${total}`;
+
+    let buttonDisc = document.getElementById('buttonDiscount');
+    let discountApplied = false;
+    document.getElementById('inputdisc').value = '';
+
+    buttonDisc.onclick = () => {
+    if (!discountApplied && cart.length > 0) {
+        let inputDiscount = document.getElementById('inputdisc').value;
+        let foundCode = codeDiscount.find(codeDes => codeDes.code === inputDiscount);
+        
+        if (foundCode) {
+            desc = (foundCode.discount / 100);
+            total = total - (desc * total);
+            discountApplied = true;
+        }
+
+        let totalCart = document.getElementById('totalCart');
+        totalCart.innerHTML = `Total: $ ${total}`;
+    }
+    } 
     }
 }
 
