@@ -29,7 +29,7 @@ function cardProducts() {
                 type.textContent = product.type;
 
                 let price = document.createElement("p");
-                price.textContent = `$ ${product.price}`;
+                price.textContent = `$ ${product.price.toLocaleString('es-CL')}`;
                 price.className = "card-text";
 
                 let button = document.createElement("button");
@@ -113,9 +113,10 @@ function cartProducts() {
             cant.className = "cart-item-price"
             cant.textContent = `Cantidad de productos: ${product.count}`
 
+            subTotal = product.price * product.count;
             let price = document.createElement("p")
             price.className = "cart-item-price"
-            price.textContent = `$ ${product.price * product.count}`
+            price.textContent = `$ ${subTotal.toLocaleString('es-CL')}`
 
             let removeProduct = document.createElement("button")
             removeProduct.className = "btn btn-outline-danger"
@@ -145,7 +146,7 @@ function cartProducts() {
     }
 
     let totalCart = document.getElementById('totalCart')
-    totalCart.innerHTML = `Total: $ ${total}`
+    totalCart.innerHTML = `Total: $ ${total.toLocaleString('es-CL')}`
 
     // Resetear descuento si el carrito está vacío
     let discountApplied = false
@@ -178,7 +179,7 @@ function cartProducts() {
                     }
 
                     let totalCart = document.getElementById('totalCart')
-                    totalCart.innerHTML = `Total: $ ${total}`
+                    totalCart.innerHTML = `Total: $ ${total.toLocaleString('es-CL')}`
                 })
         }
     }
