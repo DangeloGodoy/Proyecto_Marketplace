@@ -38,6 +38,16 @@ function cardProducts() {
                 button.onclick = () => {
                     addToCart(product);
                     cartProducts();
+                    Toastify({
+                        text: "✅ Producto agregado al carrito",
+                        gravity: "bottom",
+                        position: "left",
+                        className: "alertBox",
+                        offset: {
+                          x: 50,
+                          y: 10 
+                        },
+                      }).showToast();
                 };
                 bodyDiv.appendChild(company)
                 bodyDiv.appendChild(name);
@@ -110,7 +120,19 @@ function cartProducts() {
             let removeProduct = document.createElement("button")
             removeProduct.className = "btn btn-outline-danger"
             removeProduct.textContent = "Borrar Producto"
-            removeProduct.onclick = () => removeCart(product.id)
+            removeProduct.onclick = () => {
+                removeCart(product.id)
+                Toastify({
+                    text: "🚫 Producto eliminado al carrito",
+                    gravity: "bottom",
+                    position: "left",
+                    className: "alertBox",
+                    offset: {
+                      x: 50,
+                      y: 10 
+                    },
+                  }).showToast();
+            }
 
             productDiv.appendChild(name)
             productDiv.appendChild(cant)
@@ -142,6 +164,17 @@ function cartProducts() {
                         desc = (foundCode.discount / 100)
                         total = total - (desc * total)
                         discountApplied = true
+                        Swal.fire({
+                            title: "Descuento Aplicado",
+                            html: `Se aplico correctamente el codigo <b>${foundCode.code}</b> con un ${foundCode.discount}% de descuento`,
+                            icon: "success"
+                          });    
+                    } else {
+                        Swal.fire({
+                            title: "Codigo invalido o vacio",
+                            text: "El codigo ingresado no es valido o el campo esta vacio",
+                            icon: "error"
+                          });  
                     }
 
                     let totalCart = document.getElementById('totalCart')
