@@ -147,42 +147,6 @@ function cartProducts() {
 
     let totalCart = document.getElementById('totalCart')
     totalCart.innerHTML = `Total: $ ${total.toLocaleString('es-CL')}`
-
-    // Resetear descuento si el carrito está vacío
-    let discountApplied = false
-    document.getElementById('inputdisc').value = ''
-
-    let buttonDisc = document.getElementById('buttonDiscount')
-    buttonDisc.onclick = () => {
-        if (!discountApplied && cart.length > 0) {
-            let inputDiscount = document.getElementById('inputdisc').value
-            fetch("./db/codesDesc.json")
-                .then(response => response.json())
-                .then(codeDiscount => {
-                    let foundCode = codeDiscount.find(codeDes => codeDes.code === inputDiscount)
-
-                    if (foundCode) {
-                        desc = (foundCode.discount / 100)
-                        total = total - (desc * total)
-                        discountApplied = true
-                        Swal.fire({
-                            title: "Descuento Aplicado",
-                            html: `Se aplico correctamente el codigo <b>${foundCode.code}</b> con un ${foundCode.discount}% de descuento`,
-                            icon: "success"
-                          });    
-                    } else {
-                        Swal.fire({
-                            title: "Codigo invalido o vacio",
-                            text: "El codigo ingresado no es valido o el campo esta vacio",
-                            icon: "error"
-                          });  
-                    }
-
-                    let totalCart = document.getElementById('totalCart')
-                    totalCart.innerHTML = `Total: $ ${total.toLocaleString('es-CL')}`
-                })
-        }
-    }
 }
 
 cardProducts();
