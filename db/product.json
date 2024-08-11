@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Smartphone Galaxy S21",
+        "marke": "Samsung",
+        "type": "Smartphone",
+        "price": 799000,
+        "img": "./img/galaxy_s21.jpg"
+    },
+    {
+        "id": 2,
+        "name": "iPhone 15 Pro",
+        "marke": "Apple",
+        "type": "Smartphone",
+        "price": 999000,
+        "img": "./img/iphone_15_pro.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Laptop XPS 13",
+        "marke": "Dell",
+        "type": "Laptop",
+        "price": 1199000,
+        "img": "./img/Laptop_xps_13.jpg"
+    },
+    {
+        "id": 4,
+        "name": "MacBook Pro",
+        "marke": "Apple",
+        "type": "Laptop",
+        "price": 1499000,
+        "img": "./img/macbook_pro.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Televisor OLED CX",
+        "marke": "LG",
+        "type": "Televisor",
+        "price": 1299000,
+        "img": "./img/lg_oled_cx.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Televisor QLED Q60T",
+        "marke": "Samsung",
+        "type": "Televisor",
+        "price": 1099000,
+        "img": "./img/samsung_qled_q60t.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Tablet Galaxy Tab S7",
+        "marke": "Samsung",
+        "type": "Tablet",
+        "price": 649000,
+        "img": "./img/galaxy_tab_s7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "iPad Pro",
+        "marke": "Apple",
+        "type": "Tablet",
+        "price": 899000,
+        "img": "./img/ipad_pro.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Auriculares WH-1000XM4",
+        "marke": "Sony",
+        "type": "Auriculares",
+        "price": 349000,
+        "img": "./img/sony_wh1000xm4.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Auriculares AirPods Pro",
+        "marke": "Apple",
+        "type": "Auriculares",
+        "price": 249000,
+        "img": "./img/airpods_pro.jpg"
+    }
+]
