@@ -8,6 +8,10 @@ header {
     margin-bottom: 20px;
 }
 
+main {
+    padding-top: 60px;
+}
+
 .navbar {
     background-color: #343a40 !important;
 } 
@@ -86,8 +90,39 @@ header {
     margin-top: 20px;
 }
 
+.margin-bottom {
+    margin-bottom: 100px;
+}
+
 .alertBox {
     background: #343a40;
     -webkit-box-shadow: 1px 5px 11px 0px rgba(0,0,0,0.63); 
     box-shadow: 1px 5px 11px 0px rgba(0,0,0,0.63);
+    cursor: none;
+}
+
+.alertBox-cart {
+    background: #343a40;
+    color: #fff;
+    -webkit-box-shadow: 1px 5px 11px 0px rgba(0,0,0,0.63); 
+    box-shadow: 1px 5px 11px 0px rgba(0,0,0,0.63);
+    position: fixed;
+    z-index: 9999;
+    right: 10px; 
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius: 2px;
+    max-width: calc(50% - 20px);
+    transform: translate(50px, -10px);
+    opacity: 1;
+    transition: all .4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    cursor: none;
+}
+
+.formPay .backCartButton {
+    display: none;
+}
+
+.ocultar {
+    display: none;
 }
