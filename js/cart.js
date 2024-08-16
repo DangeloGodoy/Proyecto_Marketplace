@@ -167,7 +167,6 @@ function processPay() {
 }
 
 // Manejo para el envío del formulario
-
 function validateSendForm(event) {
     'use strict'
     const numberCard = document.getElementById('numberCard')
@@ -209,13 +208,12 @@ function validateSendForm(event) {
                             icon: 'success',
                             confirmButtonText: 'Aceptar'
                         })
-
                         setTimeout(() => {
                             localStorage.removeItem('total')
                             localStorage.removeItem('carrito')
                             form.submit()
                             window.location.href = pageURL
-                        }, 5000)
+                        }, 2000)
                     } else {
                         Swal.fire({
                             title: 'Error en el Pago',
@@ -232,7 +230,6 @@ function validateSendForm(event) {
         console.error('Se detectó el siguiente error al enviar el formulario: ', err)
     }
 }
-
 
 function listState() {
     // Cargar comunas desde un archivo JSON y rellenar el select
