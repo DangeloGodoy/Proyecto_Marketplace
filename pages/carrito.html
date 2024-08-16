@@ -67,8 +67,6 @@
                     <label for="state" class="form-label">Comuna</label>
                     <select class="form-select" id="state" required>
                         <option selected disabled value="">Selecciona tu comuna</option>
-                        <option>...</option>
-                        
                     </select>
                     <div class="invalid-feedback">
                         Por favor rellenar
@@ -76,7 +74,28 @@
                 </div>
                 <div class="col-md-3">
                     <label for="zipCode" class="form-label">Codigo zip</label>
-                    <input type="number" class="form-control" id="zipCode" placeholder="Ingresa tu zip aqui" required>
+                    <input type="text" class="form-control" id="zipCode" placeholder="Ingresa tu zip aqui" required>
+                    <div class="invalid-feedback">
+                        Por favor rellenar
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="numberCard" class="form-label">Tarjeta de credito o debito</label>
+                    <input type="text" class="form-control" id="numberCard" placeholder="Ingresa tu tarjeta aqui" required>
+                    <div class="invalid-feedback">
+                        Por favor rellenar
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="dateTime" class="form-label">Fecha de vencimiento</label>
+                    <input type="text" class="form-control" id="dateTime" placeholder="mm/aa" required>
+                    <div class="invalid-feedback">
+                        Por favor rellenar
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="cvc" class="form-label">Codigo CVC</label>
+                    <input type="password" class="form-control" id="cvc" placeholder="Ingresa tu cvc aqui" required>
                     <div class="invalid-feedback">
                         Por favor rellenar
                     </div>
