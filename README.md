@@ -9,7 +9,7 @@
 </ul>
 
 <h3>Datos para probar el pago</h3>
-<p>Se dejan datos de tarjeta para realizar las pruebas de los pagos</p>
+<p>Se dejan datos de tarjeta para realizar las pruebas de los pagos, en caso de agregar otra información el sistema rechaza la compra</p>
 <ul>
   <p>Cliente 1</p>
   <ul>
