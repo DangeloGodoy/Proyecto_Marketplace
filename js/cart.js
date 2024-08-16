@@ -212,7 +212,7 @@ function validateSendForm(event) {
                             localStorage.removeItem('total')
                             localStorage.removeItem('carrito')
                             form.submit()
-                            window.location.href = pageURL
+                            window.location.href = (pageURL+'/Proyecto_Marketplace')
                         }, 2000)
                     } else {
                         Swal.fire({
